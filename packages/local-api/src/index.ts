@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import express from 'express';
 import { createProxyMiddleware } from 'http-proxy-middleware';
 import path from 'path';
@@ -7,7 +8,7 @@ export const serve = (port: number, filename: string, dir: string, isProduction:
   const app = express()
   app.use(createCellRouter(dir, filename));
   if (isProduction) {
-    const filePath = require.resolve('local-client/build/index.html');
+    const filePath = require.resolve('@jsnotebook-interface/local-client/build/index.html');
     app.use(express.static(path.dirname(filePath)));
   } else {
     app.use(createProxyMiddleware({

@@ -1,17 +1,26 @@
 {
-  "name": "cli",
+  "name": "jsnotebook-interface",
   "version": "1.0.0",
   "description": "",
+  "bin": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "index.js",
   "scripts": {
-    "start": "tsc --watch"
+    "start": "tsc --watch",
+    "prepublishOnly": "tsc"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@jsnotebook-interface/local-api": "^1.0.0",
     "commander": "^7.2.0",
-    "local-api": "^1.0.0"
+    "esbuild": "^0.11.14"
   },
   "devDependencies": {
     "@types/node": "^14.14.37",
