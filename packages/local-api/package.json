@@ -19,14 +19,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@jsnotebook-interface/local-client": "^1.0.0",
     "@types/cors": "^2.8.10",
     "cors": "^2.8.5",
-    "http-proxy-middleware": "^1.1.2",
-    "@jsnotebook-interface/local-client": "^0.1.0"
+    "http-proxy-middleware": "^1.1.2"
   },
   "devDependencies": {
     "@types/es6-shim": "^0.31.41",
-    "express": "^4.17.1",
-    "@types/express": "^4.17.11"
+    "@types/express": "^4.17.11",
+    "express": "^4.17.1"
   }
 }
